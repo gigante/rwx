@@ -10,7 +10,6 @@ test:
 	@pytest
 
 coverage:
-	@coverage report -m
 	@pytest --cov-report xml --cov=./
 
 run:
