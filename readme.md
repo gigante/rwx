@@ -3,7 +3,7 @@
 **rwx** is a tool to convert between two formats of Linux File Permission. It can be used via API or CLI.
 
 <p align="center">
-  <img src="./img/example.png" alt="Api example" width="800" height="300">
+  <img src="https://raw.githubusercontent.com/gigante/rwx/master/img/example.jpg" alt="Api example" width="800" height="300">
 </p>
 
 ## How to install
