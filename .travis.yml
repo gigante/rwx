@@ -12,6 +12,6 @@ before_script:
   - ./cc-test-reporter before-build
 script:
   - 'pipenv run make test'
-  - 'pipenv run pytest --cov-report xml --cov=./'
 after_script:
+  - 'pipenv run make coverage'
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

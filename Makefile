@@ -1,4 +1,4 @@
-.PHONY: install
+.PHONY: install test coverage run
 
 export HOST=0.0.0.0
 export PORT=8000
@@ -8,6 +8,9 @@ install:
 
 test:
 	@pytest
+
+coverage:
+	@pytest --cov-report xml --cov=./
 
 run:
 	@gunicorn -b $(HOST):$(PORT) api:app
