@@ -1,4 +1,4 @@
-.PHONY: install test coverage run
+.PHONY: install test run
 
 export HOST=0.0.0.0
 export PORT=8000
@@ -7,9 +7,6 @@ install:
 	@pipenv install --skip-lock --dev
 
 test:
-	@pytest
-
-coverage:
 	@pytest --cov-report xml --cov=./
 
 run:
