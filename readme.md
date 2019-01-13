@@ -1,4 +1,4 @@
-# rwx [![Build Status](https://travis-ci.org/gigante/rwx.svg?branch=master)](https://travis-ci.org/gigante/rwx)
+# rwx [![Build Status](https://travis-ci.org/gigante/rwx.svg?branch=master)](https://travis-ci.org/gigante/rwx) [![Maintainability](https://api.codeclimate.com/v1/badges/acb669fd65fa45e7ec02/maintainability)](https://codeclimate.com/github/gigante/rwx/maintainability)
 
 **rwx** is a tool to convert between two formats of Linux File Permission. It can be used via API or CLI.
 
