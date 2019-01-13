@@ -1,7 +1,7 @@
 language: python
 python: "3.6"
 install:
-  - 'pip install pipenv'
+  - 'pip install pipenv codacy-coverage'
   - 'pipenv run make install'
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
@@ -11,3 +11,4 @@ script:
   - 'pipenv run make test'
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - python-codacy-coverage -r coverage.xml
