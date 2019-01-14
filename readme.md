@@ -6,6 +6,10 @@
   <img src="https://raw.githubusercontent.com/gigante/rwx/master/img/example.jpg" alt="Api example" width="800" height="300">
 </p>
 
+## Test in heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## How to install
 
 **Requirements**
@@ -76,7 +80,7 @@ $ python cli.py 700
     text_mode: rwx------
 ```
 
-## Tests
+## Tests and code coverage
 
 ```sh
 $ make test
