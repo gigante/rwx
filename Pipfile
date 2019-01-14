@@ -7,12 +7,8 @@ verify_ssl = true
 flake8 = "*"
 pytest = "*"
 pytest-cov = "*"
-codecov = "*"
 
 [packages]
 flask = "*"
 gunicorn = "*"
 click = "*"
-
-[requires]
-python_version = "3.7"
