@@ -1,0 +1,10 @@
+{
+    "name": "rwx",
+    "description": "rwx",
+    "repository": "https://github.com/gigante/rwx",
+    "logo": "https://raw.githubusercontent.com/gigante/rwx/master/img/example.jpg",
+    "keywords": ["python", "flask", "click"],
+    "buildpacks": [{
+        "url": "heroku/python"
+    }]
+}
