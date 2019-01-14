@@ -8,7 +8,7 @@ permission = {}
 
 @app.route("/")
 def hello():
-    return "<h1>rwx api</h1> <p>see docs in <a href='github.com/gigante/rwx'>github.com/gigante/rwx</a></p>"
+    return "<h1>rwx api</h1> <p>see docs in <a href='http://github.com/gigante/rwx'>github.com/gigante/rwx</a></p>"
 
 
 @app.route('/chmod/<param>')
