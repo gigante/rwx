@@ -1,0 +1,6 @@
+#!/bin/bash
+
+case "$1" in
+api) pipenv run http localhost:8000/chmod/"$2" ;;
+cli) pipenv run python cli.py "$2" ;;
+esac

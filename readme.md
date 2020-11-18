@@ -1,49 +1,21 @@
-# rwx [![Build Status](https://travis-ci.org/gigante/rwx.svg?branch=master)](https://travis-ci.org/gigante/rwx) [![Maintainability](https://api.codeclimate.com/v1/badges/acb669fd65fa45e7ec02/maintainability)](https://codeclimate.com/github/gigante/rwx/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/acb669fd65fa45e7ec02/test_coverage)](https://codeclimate.com/github/gigante/rwx/test_coverage) [![Requirements Status](https://requires.io/github/gigante/rwx/requirements.svg?branch=master)](https://requires.io/github/gigante/rwx/requirements/?branch=master)
+# rwx
 
-**rwx** is a tool to convert between two formats of Linux File Permission. It can be used via API or CLI.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/gigante/rwx/master/img/example.jpg" alt="Api example" width="800" height="300">
-</p>
-
-## Test in heroku
+[![Build Status](https://travis-ci.org/gigante/rwx.svg?branch=master)](https://travis-ci.org/gigante/rwx) [![Maintainability](https://api.codeclimate.com/v1/badges/acb669fd65fa45e7ec02/maintainability)](https://codeclimate.com/github/gigante/rwx/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/acb669fd65fa45e7ec02/test_coverage)](https://codeclimate.com/github/gigante/rwx/test_coverage) [![Requirements Status](https://requires.io/github/gigante/rwx/requirements.svg?branch=master)](https://requires.io/github/gigante/rwx/requirements/?branch=master)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-## How to install
-
-**Requirements**
-
-[pipenv](https://docs.pipenv.org/)
-
-```sh
-$ pip install --user pipenv
-```
-
-**Install**
-
-Clone this repo
-
-```sh
-$ git clone https://github.com/gigante/rwx
-$ cd rwx
-```
-
-Install packages
-
-```sh
-$ make install
-```
+**rwx** is a tool to convert between two formats of Linux File Permission. It can be used via API or CLI.
 
 ## How to use
 
-Access the `venv`
+**Install**
 
 ```sh
-$ pipenv shell
+$ git clone https://github.com/gigante/rwx && cd rwx
+$ make install
 ```
 
-**Via api**
+**Local**
 
 In one terminal, run server
 
@@ -51,10 +23,10 @@ In one terminal, run server
 $ make run
 ```
 
-In other, request endpoint (curl or [httpie](https://httpie.org/))
+In another, request endpoint
 
 ```sh
-$ http localhost:8000/chmod/700
+$ ./rwx api 700
 
     HTTP/1.1 200 OK
     Connection: close
@@ -69,15 +41,21 @@ $ http localhost:8000/chmod/700
     }
 ```
 
-**Via cli**
-
-Example
+Or... cli
 
 ```sh
-$ python cli.py 700
+$ ./rwx cli 700
 
     numeric_mode: 700
     text_mode: rwx------
+```
+
+**Docker**
+
+```sh
+$ make deploy
+$ ./rwx api 700
+$ ./rwx api rwx------
 ```
 
 ## Tests and code coverage
