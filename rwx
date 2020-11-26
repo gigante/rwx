@@ -1,6 +1,14 @@
 #!/bin/bash
 
+function run_local() { pipenv run "${@:1}"; }
+function run_docker() { docker exec -t rwx pipenv run "${@:1}"; }
+
+call_api="http localhost:8000/chmod/$2"
+call_cli="python cli.py $2"
+
 case "$1" in
-api) pipenv run http localhost:8000/chmod/"$2" ;;
-cli) pipenv run python cli.py "$2" ;;
+api) run_local $call_api ;;
+cli) run_local $call_cli ;;
+docker-api) run_docker $call_api ;;
+docker-cli) run_docker $call_cli ;;
 esac

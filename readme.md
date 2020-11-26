@@ -54,8 +54,10 @@ $ ./rwx cli 700
 
 ```sh
 $ make deploy
-$ ./rwx api 700
-$ ./rwx api rwx------
+$ ./rwx docker-api 700
+$ ./rwx docker-cli 700
+$ ./rwx docker-api rwx------
+$ ./rwx docker-cli rwx------
 ```
 
 ## Tests and code coverage
